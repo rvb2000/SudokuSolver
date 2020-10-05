@@ -1,0 +1,310 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Piedra&display=swap" rel="stylesheet">
+<style>
+.a1{
+	height:36.9333px;
+	width:36.9333px;
+	text-align: center;
+	padding: 2px;
+	margin: 2px;
+	border-radius: 18%;
+	color: #132743;
+	background-color: #f8efd4;
+	font-family:  cursive;
+}
+.a2 tr td input{ 
+	background-color: #edc988;
+}
+.a1:hover{
+	cursor: text;
+	
+}
+body{
+	background-color: #132743;
+}
+
+h1,h2{
+	color:  #f8efd4;
+}
+h1{
+	font-size: 25px;
+	
+}
+ .h12{
+	font-family: 'Piedra', cursive;
+	font-size: 50px;
+	padding: 0;
+	margin-bottom: -10px;
+ }
+.outer{
+	background-color: #d7385e;
+	width:440.4px;
+   height: 440.4px;
+	border-radius: 5%;
+	padding : 5px;
+}
+
+.container{
+	display: flex;
+	justify-content:space-evenly;
+
+}
+.Note{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	vertical-align: center;
+	width: 31vw;
+	text-align: justify;
+	font-family:  cursive;
+	
+}
+.Note h1{
+	font-size: 25px;
+}
+.note1{
+	color: #d7385e;
+	font-weight: 600;
+	font-size: 25px;
+
+}
+.note2{
+	color: #f8efd4;
+	letter-spacing: .5px;
+}
+
+.button{
+	margin: 10px;
+	width: 80px;
+	height: 30px;
+	border-radius: 10px;
+	margin-left: 330px;
+	color: #132743;
+	font-weight: 700;
+	font-size: 15px;
+	background-color:#f8efd4;
+	font-family:'Piedra', cursive;
+}
+
+.button:hover{
+	background-color: #132743;
+	color:#f8efd4;
+	cursor: pointer;
+}
+.copy{
+	color :#f8efd4;
+	font-size: 14px;
+	
+	font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif
+}
+</style>
+</head>
+<body>
+
+
+<h1 align="center" class="h12">SUDOKU SOLVER</h1>
+<hr><hr>
+<br>
+<div class="container">
+	<div class="Note"><h1> !!! Welcome to Sudoku solver !!!</h1><span class="note1">Note :- </span> <span class="note2"> Please enter your unsolved Sudoku in here in the given empty sudoku, Then press Solve button to get solved the sudoku.<br>
+	allow digits are 0-9, write <b>0</b> in empty cells. </span></div>
+<div>
+<form action="http://localhost/perl/solver.cgi" method="POST" style="margin-left:50px;">
+
+<table class="outer" align="center">
+	<tr>
+	<td>
+<table class ="inner">
+	<tr>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="11" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="12" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="13" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1 " value="0" name="21" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1 " value="0" name="22" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1 " value="0" name="23" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="31" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="32" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="33" required /></td>
+	</tr>
+</table>
+</td>
+
+<td>
+	<table class ="inner a2">
+		<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="14" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="15" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="16" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="24" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="25" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="26" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="34" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="35" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="36" required /></td>
+		</tr>
+	</table>
+	</td>
+
+	<td>
+		<table class ="inner">
+			<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="17" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="18" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="19" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="27" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="28" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="29" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="37" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="38" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="39" required /></td>
+			</tr>
+		</table>
+		</td>
+</tr>
+
+<tr>
+	<td>
+<table class ="inner a2">
+	<tr>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="41" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="42" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"  value="0" name="43" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"  value="0" name="51" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="52" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="53" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="61" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="62" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="63" required /></td>
+	</tr>
+</table>
+</td>
+
+<td>
+	<table class ="inner">
+		<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"  value="0" name="44" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"  value="0" name="45" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="46" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="54" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="55" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="56" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="64" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="65" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="66" required /></td>
+		</tr>
+	</table>
+	</td>
+
+	<td>
+		<table class ="inner a2">
+			<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="47" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="48" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="49" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="57" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="58" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="59" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="67" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="68" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="69" required /></td>
+			</tr>
+		</table>
+		</td>
+</tr>
+
+<tr>
+	<td>
+<table class ="inner">
+	<tr>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="71" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="72" required /></td>
+	<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="73" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="81" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="82" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"value="0"  name="83" required /></td>
+	</tr>
+	<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="91" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="92" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="93" required /></td>
+	</tr>
+</table>
+</td>
+
+<td>
+	<table class ="inner a2">
+		<tr>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="74" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="75" required /></td>
+		<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="76" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="84" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="85" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="86" required /></td>
+		</tr>
+		<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="94" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="95" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="96" required /></td>
+		</tr>
+	</table>
+	</td>
+
+	<td>
+		<table class ="inner">
+			<tr>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="77" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="78" required /></td>
+			<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="79" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="87" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="88" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1"value="0"  name="89" required /></td>
+			</tr>
+			<tr>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0"  name="97" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="98" required /></td>
+				<td><input type="text" pattern="\d" title="single digit allow between 0-9" class="a1" value="0" name="99" required /></td>
+			</tr>
+		</table>
+		</td>
+</tr>
+</table>
+
+<input type="submit"  value="SOLVE" class="button">
+</form>
+</div>
+</div>
+<div class="copy" align="center">@copyRight 17BITt008 & 17BIT013</div>
+</body>
+</html>
