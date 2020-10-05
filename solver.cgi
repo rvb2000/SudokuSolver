@@ -571,7 +571,7 @@ h1{
 <hr><hr>
 <br>
 <div class="container">
-	<div class="Note"><h1 class="note1"> !!! Error Solution doesn't exits !!!</h1> <span class="note2"> $msg<br>
+	<div class="Note"><h1 class="note1"> !!! Error Solution doesn't exist !!!</h1> <span class="note2"> $msg<br>
 	Check the given sudoku for any error and press RESET to do it again ...... </span></div>
 <div>
 <form action="http://localhost/perl/solver.cgi" method="POST" style="margin-left:50px;">
