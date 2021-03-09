@@ -16,3 +16,4 @@ step 5 :- Open browser and type 'http://localhost/perl/sudokuSolver.html' in URL
 
 That's all folks .... Your sudoku solver using perl is running on your browser.
 
+.
